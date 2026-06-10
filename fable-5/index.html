@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Review — Fable 5, Day One</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+  :root{ --ink:#1C1C28; --muted:#555770; --line:#E3E7EF; --blue:#0063F7; --soft:#F2F6FF; --teal:#0E9F8A; --amber:#C77A1E; --violet:#7C4DCC; }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Source Serif 4',Georgia,serif;background:#F7F8FB;color:var(--ink);line-height:1.7;}
+  a{color:var(--blue);text-decoration:underline;text-underline-offset:3px;}
+  .banner{background:var(--ink);color:#fff;font-family:'Inter',sans-serif;font-size:13.5px;padding:10px 24px;display:flex;gap:18px;align-items:center;flex-wrap:wrap;}
+  .banner b{color:#C9AEFB;}
+  .banner .pill{background:rgba(255,255,255,.12);border-radius:999px;padding:3px 12px;font-weight:600;}
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px 90px;}
+  .coverwrap{max-width:1000px;margin:34px auto 0;padding:0 24px;}
+  .coverwrap img{width:100%;border-radius:14px;box-shadow:0 18px 50px rgba(12,27,58,.18);}
+  .cap{font-family:'Inter',sans-serif;font-size:13px;color:var(--muted);margin-top:8px;text-align:center;}
+  h1{font-family:'Inter',sans-serif;font-size:42px;line-height:1.12;font-weight:800;letter-spacing:-1.2px;margin:46px 0 10px;}
+  .standfirst{font-family:'Inter',sans-serif;font-size:20px;color:var(--muted);font-weight:500;margin-bottom:18px;}
+  .byline{font-family:'Inter',sans-serif;display:flex;align-items:center;gap:14px;padding:18px 0 26px;border-bottom:1.5px solid var(--line);margin-bottom:34px;}
+  .byline .av{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--violet),#37E0C3);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px;}
+  .byline .nm{font-weight:700;font-size:16px;}
+  .byline .rl{font-size:13.5px;color:var(--muted);}
+  h2{font-family:'Inter',sans-serif;font-size:28px;font-weight:800;letter-spacing:-.6px;margin:44px 0 16px;}
+  p{font-size:19px;margin:0 0 20px;}
+  p b, li b{font-weight:700;}
+  ul,ol{margin:0 0 20px 26px;}
+  li{font-size:19px;margin-bottom:10px;}
+  .lede{font-size:23px;line-height:1.6;}
+  .figure{margin:34px 0;}
+  .figure img{width:100%;border-radius:12px;box-shadow:0 14px 40px rgba(12,27,58,.14);}
+  .stat{color:var(--violet);font-weight:700;}
+  .refs{font-family:'Inter',sans-serif;background:var(--soft);border:1.5px solid #D6E2FB;border-radius:14px;padding:24px 28px;margin-top:46px;}
+  .refs h3{font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:12px;}
+  .refs li{font-size:15px;color:#3A4658;margin-bottom:8px;}
+  .companion{font-family:'Inter',sans-serif;background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:28px 30px;margin-top:34px;}
+  .companion h3{font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);margin-bottom:14px;}
+  .companion p{font-size:16px;white-space:pre-wrap;margin-bottom:0;line-height:1.6;}
+  .alt{font-family:'Inter',sans-serif;background:#FFF8EC;border:1.5px solid #F2DEB6;border-radius:14px;padding:20px 26px;margin:26px 0 0;}
+  .alt h3{font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);margin-bottom:10px;}
+  .alt li{font-size:15.5px;color:#5a4a28;margin-bottom:6px;}
+  .urgent{font-family:'Inter',sans-serif;background:#ECFDF7;border:1.5px solid #A7E8D0;border-radius:14px;padding:16px 24px;margin:26px 0 0;font-size:15.5px;color:#11604A;font-weight:600;}
+  .qbox{border-left:4px solid var(--violet);background:#F6F1FF;padding:18px 24px;border-radius:0 12px 12px 0;margin:0 0 20px;font-size:19px;}
+  @media (max-width:640px){ h1{font-size:30px;} p,li{font-size:17px;} .lede{font-size:19px;} }
+</style>
+</head>
+<body>
+
+<div class="banner">
+  <span class="pill">REVIEW COPY</span>
+  <span>Target: <b>LinkedIn Article — personal page</b></span>
+  <span>Cover: <b>cover.png</b></span>
+  <span>Inline: <b>the-tradeoff.png · which-model.png</b></span>
+  <span>Casual tone · no emojis</span>
+</div>
+
+<div class="coverwrap">
+  <img src="cover.png" alt="Cover — Anthropic's Fable 5 is here" />
+  <div class="cap">Article cover (1920×1080)</div>
+</div>
+
+<div class="wrap">
+
+  <h1>I Switched to Fable 5 on Day One. Here's What You Should Know.</h1>
+  <div class="standfirst">Anthropic's first Mythos-class model — the numbers, the trade-offs, and the 12-day free window</div>
+
+  <div class="byline">
+    <div class="av">HP</div>
+    <div>
+      <div class="nm">Hari Prasad</div>
+      <div class="rl">Regional Head — Middle East, Sedin Technologies</div>
+    </div>
+  </div>
+
+  <div class="urgent">⏱ Time-sensitive: the article's hook (free in all paid plans) expires <b>June 22</b> — publish within a day or two for maximum relevance.</div>
+
+  <div class="alt">
+    <h3>Alternative headlines (pick before publishing)</h3>
+    <ul>
+      <li><b>Current:</b> I Switched to Fable 5 on Day One. Here's What You Should Know.</li>
+      <li>Fable 5 Is Free in Your Claude Plan Until June 22. Use It.</li>
+      <li>The Smartest Model You Can Use Today Is Also the Slowest. That's Fine.</li>
+    </ul>
+  </div>
+
+  <p class="lede" style="margin-top:38px;">Anthropic released a new model yesterday, and this one is different. Not "another version number" different. Actually different.</p>
+
+  <p>It is called <b>Claude Fable 5</b>, and it is the first time the public gets access to a <b>Mythos-class</b> model — the family Anthropic has so far kept internal. I switched my daily setup to it the same day. Here is what I think you should know, in plain numbers, before you decide whether to care.</p>
+
+  <h2>What it actually is</h2>
+
+  <p>Fable 5 is, by <a href="https://www.anthropic.com/news/claude-fable-5-mythos-5" target="_blank">Anthropic's own announcement</a>, more capable than any model they have ever made generally available — state-of-the-art on nearly every benchmark, and on some of them <span class="stat">more than 10% above Claude Opus 4.8</span>, which itself came out only late last month. The pace right now is honestly hard to keep up with.</p>
+
+  <p>Two details make this release interesting beyond the benchmarks.</p>
+
+  <p>First, the safety design. Anthropic says the broad release is only possible because of new safeguards: in specific high-risk areas, Fable 5 will not answer — instead, your query quietly gets a response from Opus 4.8. This triggers in <a href="https://techcrunch.com/2026/06/09/anthropic-released-claude-fable-5-its-most-powerful-model-publicly-days-after-warning-ai-is-getting-too-dangerous/" target="_blank">less than 5% of sessions</a>. Think about that pattern for a second: the guardrail is not a refusal message, it is a <i>fallback to a safer model</i>. I suspect we will see this "model behind a model" pattern a lot more in enterprise AI architecture.</p>
+
+  <p>Second, the access model. And this is the part with a clock on it.</p>
+
+  <h2>The 12-day window</h2>
+
+  <div class="figure">
+    <img src="the-tradeoff.png" alt="Fable 5 in four numbers" />
+    <div class="cap">Inline image 1 — the-tradeoff.png</div>
+  </div>
+
+  <p>Fable 5 is included in <b>every paid Claude plan — Pro, Max, Team, and seat-based Enterprise — at no extra cost until June 22.</b> From June 23, it comes out of the plans and needs usage credits.</p>
+
+  <p>So if you have any paid Claude subscription, you have roughly twelve days to use the most capable model on the market for free. After that, you pay separately. I do not know if Anthropic will extend this, but I would not plan on it.</p>
+
+  <p>My simple advice: pick one hard problem you have been postponing — a messy architecture decision, a document set nobody wants to read, a bug nobody could crack — and give it to Fable 5 this week. That is the honest way to find out if a Mythos-class model matters for your work.</p>
+
+  <h2>The numbers that matter</h2>
+
+  <p><b>Pricing (API):</b> <a href="https://www.finout.io/blog/claude-fable-5-mythos-5-pricing-benchmarks" target="_blank">$10 per million input tokens, $50 per million output</a> — roughly <b>double Opus 4.8</b>. The standard 90% prompt-caching discount applies, which matters a lot in agent workflows where you resend the same context again and again.</p>
+
+  <p><b>Context:</b> 1 million tokens in, up to 128K out. A whole mid-sized codebase, or a complete contract data room, fits in one conversation.</p>
+
+  <p><b>Speed — read this part before you get excited:</b> <a href="https://artificialanalysis.ai/models/claude-fable-5" target="_blank">Artificial Analysis measured</a> about <span class="stat">60 tokens per second</span> output and <span class="stat">~80 seconds to first token</span>. That is slow. Not "slightly slower" — you will feel it. You ask, and then you wait, watching nothing happen, for over a minute sometimes.</p>
+
+  <p>And after a day of using it, my view is: that is fine — <i>if you use it for the right things.</i></p>
+
+  <h2>Smartest is not fastest, and that is okay</h2>
+
+  <div class="figure">
+    <img src="which-model.png" alt="When I reach for Fable 5 vs Opus 4.8" />
+    <div class="cap">Inline image 2 — which-model.png</div>
+  </div>
+
+  <div class="qbox">Fable 5 is not a replacement for your daily model. It is a <b>new top gear.</b></div>
+
+  <p>For interactive coding — the tight loop where you ask, check, adjust, ask again — the ~80-second wait kills the rhythm. Opus 4.8 stays my daily driver there, and it is excellent. Same for high-volume agent pipelines: at 2× the price and half the speed, putting Fable 5 in a loop that runs hundreds of times is just burning money.</p>
+
+  <p>But for the <i>other</i> kind of work — the deep, slow, "get this right" work — the equation flips completely. Architecture decisions on large systems. The debugging session where three people already gave up. Reading a thousand pages of documents and telling me what actually matters. Strategy drafts where a wrong assumption costs months. There, waiting one minute for a meaningfully better answer is the best trade I have ever been offered. I wrote recently about how AI is brilliant at bounded work and unreliable at coordinated work — my early impression is that Fable 5 moves that boundary. Not removes it. Moves it.</p>
+
+  <p>One more practical note: in tools like Claude Code you can switch models per task. That is exactly how I run it now — Fable 5 for the hard thinking, Opus 4.8 for everything interactive. The skill is not "use the best model". The skill is knowing which gear the task needs.</p>
+
+  <h2>What this means beyond the tech</h2>
+
+  <p>Three things I keep thinking about:</p>
+
+  <p><b>The price of intelligence is forking.</b> We now have models at very different price-performance points, and the gap is widening. Teams that route work to the right model will quietly run 3–5× cheaper than teams that send everything to the flagship. Model routing is becoming a real cost discipline, the same way cloud instance selection became one.</p>
+
+  <p><b>Capability windows are the new marketing.</b> "Free for 12 days, then pay" is a very deliberate move: let everyone <i>feel</i> the difference, then charge for it. Expect this pattern from every lab. Budget owners should start treating model access like a procurement category, not a developer tool subscription.</p>
+
+  <p><b>The safety architecture is the quiet headline.</b> A frontier model that silently delegates risky queries to a safer model is a genuinely new pattern. Whatever you think about AI safety debates, this is what "governance built into the architecture" looks like in practice — and enterprises will copy it for their own internal AI gateways.</p>
+
+  <p>I will write a follow-up once I have a few weeks of real use behind me — especially on whether the brownfield/legacy work I wrote about last time actually benefits, or whether the keyhole problem stays the keyhole problem.</p>
+
+  <p>If you have a paid Claude plan: you have until June 22. Pick your hardest problem and see for yourself. Then tell me what you found — I am collecting impressions.</p>
+
+  <div class="refs">
+    <h3>References</h3>
+    <ol>
+      <li>Anthropic, <a href="https://www.anthropic.com/news/claude-fable-5-mythos-5" target="_blank">Claude Fable 5 and Claude Mythos 5</a> — announcement, 9 June 2026</li>
+      <li>TechCrunch, <a href="https://techcrunch.com/2026/06/09/anthropic-released-claude-fable-5-its-most-powerful-model-publicly-days-after-warning-ai-is-getting-too-dangerous/" target="_blank">Anthropic's Claude Fable 5 is a version of Mythos the public can access today</a></li>
+      <li>Artificial Analysis, <a href="https://artificialanalysis.ai/models/claude-fable-5" target="_blank">Claude Fable 5 — intelligence, performance &amp; price</a></li>
+      <li>Finout, <a href="https://www.finout.io/blog/claude-fable-5-mythos-5-pricing-benchmarks" target="_blank">Claude Fable 5 and Mythos 5: pricing, API costs, benchmarks</a></li>
+      <li>CNBC, <a href="https://www.cnbc.com/2026/06/09/anthropic-mythos-claude-fable-5.html" target="_blank">Anthropic releases Mythos-like AI model to the public</a></li>
+    </ol>
+  </div>
+
+  <div class="companion">
+    <h3>Companion feed post — publish alongside, links to the article</h3>
+    <p>Anthropic shipped Fable 5 yesterday — the first Mythos-class model the public can actually use. I switched my daily setup to it on day one.
+
+The short version: smartest model available today, about 2x the price of Opus 4.8, and noticeably slow (~80 seconds to first token). And — the part with a clock on it — it's included in every paid Claude plan at no extra cost only until June 22. After that, usage credits.
+
+I've written up the numbers, the trade-offs, and how I'm actually splitting work between Fable 5 and Opus 4.8 — plus why the "fallback to a safer model" guardrail design might be the quiet headline.
+
+If you have a paid Claude plan, you have 12 days to try the best model on the market for free. Article below.
+
+#Claude #EnterpriseAI</p>
+  </div>
+
+</div>
+</body>
+</html>
