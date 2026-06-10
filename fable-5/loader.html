@@ -1,0 +1,19 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>loader</title></head><body>
+<script>
+(async () => {
+  const status = (m)=>{document.body.textContent=m;};
+  try{
+    const names=['cover-light.png','the-tradeoff.png','which-model.png'];
+    const out={};
+    for(const n of names){
+      const r=await fetch(n); const b=await r.blob();
+      out[n]=await new Promise(res=>{const fr=new FileReader();fr.onload=()=>res(fr.result);fr.readAsDataURL(b);});
+    }
+    if(window.opener){
+      window.opener.postMessage({fable5Images:out},'*');
+      status('sent — you can close this tab');
+      setTimeout(()=>window.close(),1200);
+    } else status('no opener');
+  }catch(e){ status('error: '+e.message); }
+})();
+</script></body></html>
