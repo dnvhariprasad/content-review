@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex,nofollow" />
+<title>LinkedIn preview — Fable 5 article</title>
+<style>
+  /* Mimics LinkedIn's article + feed rendering as closely as possible */
+  :root{ --li-blue:#0A66C2; --ink:rgba(0,0,0,.9); --muted:rgba(0,0,0,.6); --line:#E8E6E0; --bg:#F4F2EE; }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);}
+  .note{max-width:744px;margin:18px auto 0;padding:10px 16px;background:#1C1C28;color:#fff;border-radius:8px;font-size:13px;display:flex;gap:14px;flex-wrap:wrap;}
+  .note b{color:#8FBFFB;}
+  .seclabel{max-width:744px;margin:34px auto 10px;padding:0 4px;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);}
+
+  /* ===== ARTICLE VIEW ===== */
+  .article{max-width:744px;margin:0 auto;background:#fff;border-radius:8px;border:1px solid var(--line);overflow:hidden;}
+  .cover img{width:100%;display:block;}
+  .abody{padding:24px 56px 28px;}
+  h1.title{font-size:38px;line-height:1.25;font-weight:700;color:var(--ink);margin:18px 0 16px;}
+  .author{display:flex;align-items:center;gap:12px;padding:10px 0 18px;border-bottom:1px solid var(--line);margin-bottom:26px;}
+  .author .av{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#0A66C2,#37E0C3);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px;flex:0 0 auto;}
+  .author .nm{font-size:15px;font-weight:600;}
+  .author .hl{font-size:13px;color:var(--muted);}
+  .author .dt{font-size:13px;color:var(--muted);margin-top:2px;}
+  .author .follow{margin-left:auto;color:var(--li-blue);font-weight:600;font-size:16px;border:1.5px solid var(--li-blue);border-radius:18px;padding:5px 18px;}
+  .abody p{font-size:18px;line-height:1.75;margin:0 0 24px;color:var(--ink);}
+  .abody h2{font-size:24px;font-weight:700;margin:34px 0 14px;}
+  .abody a{color:var(--li-blue);font-weight:600;text-decoration:none;}
+  .abody a:hover{text-decoration:underline;}
+  .abody img.inline{width:100%;border-radius:4px;margin:6px 0 8px;}
+  .imgcap{font-size:13px;color:var(--muted);text-align:center;margin:0 0 26px;}
+  .abody ol{margin:0 0 24px 22px;}
+  .abody ol li{font-size:15px;line-height:1.6;margin-bottom:8px;color:var(--muted);}
+  .engage{display:flex;gap:6px;border-top:1px solid var(--line);padding:6px 8px;}
+  .engage .btn{flex:1;display:flex;align-items:center;justify-content:center;gap:7px;padding:12px 0;border-radius:6px;color:var(--muted);font-weight:600;font-size:14px;}
+  .engage .btn:hover{background:#F3F2EF;}
+  .engage svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;}
+
+  /* ===== FEED SHARE CARD ===== */
+  .post{max-width:555px;margin:0 auto;background:#fff;border-radius:8px;border:1px solid var(--line);overflow:hidden;}
+  .phead{display:flex;gap:10px;padding:14px 16px 0;}
+  .phead .av{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#0A66C2,#37E0C3);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:17px;flex:0 0 auto;}
+  .phead .nm{font-size:14px;font-weight:600;}
+  .phead .hl{font-size:12px;color:var(--muted);line-height:1.35;}
+  .ptext{padding:10px 16px 12px;font-size:14px;line-height:1.55;white-space:pre-wrap;}
+  .ptext .tag{color:var(--li-blue);font-weight:600;}
+  .linkcard{border-top:1px solid var(--line);}
+  .linkcard img{width:100%;display:block;}
+  .linkmeta{background:#EEF3F8;padding:10px 16px 12px;}
+  .linkmeta .t{font-size:14px;font-weight:600;color:var(--ink);}
+  .linkmeta .d{font-size:12px;color:var(--muted);margin-top:3px;}
+  .pengage{display:flex;gap:6px;border-top:1px solid var(--line);padding:4px 8px;margin-top:0;}
+  .pengage .btn{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;padding:10px 0;border-radius:6px;color:var(--muted);font-weight:600;font-size:13px;}
+  .footer{max-width:744px;margin:30px auto 60px;text-align:center;font-size:13px;color:var(--muted);}
+  @media (max-width:640px){ .abody{padding:18px 20px 22px;} h1.title{font-size:28px;} .abody p{font-size:16px;} }
+</style>
+</head>
+<body>
+
+<div class="note"><span>PREVIEW — how this renders on <b>LinkedIn</b></span><span>Headline: <b>#3 selected</b></span><span>Avatar is a placeholder — LinkedIn shows your real photo</span></div>
+
+<div class="seclabel">1 · The article page (what readers see after clicking)</div>
+
+<div class="article">
+  <div class="cover"><img src="cover.png" alt="cover" /></div>
+  <div class="abody">
+    <h1 class="title">The Smartest Model You Can Use Today Is Also the Slowest. That's Fine.</h1>
+
+    <div class="author">
+      <div class="av">HP</div>
+      <div>
+        <div class="nm">Hari Prasad</div>
+        <div class="hl">Regional Head @ Sedin Technologies</div>
+        <div class="dt">June 10, 2026 · 6 min read</div>
+      </div>
+      <div class="follow">+ Follow</div>
+    </div>
+
+    <p>Anthropic released a new model yesterday, and this one is different. Not "another version number" different. Actually different.</p>
+
+    <p>It is called <b>Claude Fable 5</b>, and it is the first time the public gets access to a <b>Mythos-class</b> model — the family Anthropic has so far kept internal. I switched my daily setup to it the same day. Here is what I think you should know, in plain numbers, before you decide whether to care.</p>
+
+    <h2>What it actually is</h2>
+
+    <p>Fable 5 is, by <a href="https://www.anthropic.com/news/claude-fable-5-mythos-5">Anthropic's own announcement</a>, more capable than any model they have ever made generally available — state-of-the-art on nearly every benchmark, and on some of them <b>more than 10% above Claude Opus 4.8</b>, which itself came out only late last month. The pace right now is honestly hard to keep up with.</p>
+
+    <p>Two details make this release interesting beyond the benchmarks.</p>
+
+    <p>First, the safety design. Anthropic says the broad release is only possible because of new safeguards: in specific high-risk areas, Fable 5 will not answer — instead, your query quietly gets a response from Opus 4.8. This triggers in <a href="https://techcrunch.com/2026/06/09/anthropic-released-claude-fable-5-its-most-powerful-model-publicly-days-after-warning-ai-is-getting-too-dangerous/">less than 5% of sessions</a>. Think about that pattern for a second: the guardrail is not a refusal message, it is a <i>fallback to a safer model</i>. I suspect we will see this "model behind a model" pattern a lot more in enterprise AI architecture.</p>
+
+    <p>Second, the access model. And this is the part with a clock on it.</p>
+
+    <h2>The 12-day window</h2>
+
+    <img class="inline" src="the-tradeoff.png" alt="Fable 5 in four numbers" />
+    <div class="imgcap">Fable 5 in four numbers</div>
+
+    <p>Fable 5 is included in <b>every paid Claude plan — Pro, Max, Team, and seat-based Enterprise — at no extra cost until June 22.</b> From June 23, it comes out of the plans and needs usage credits.</p>
+
+    <p>So if you have any paid Claude subscription, you have roughly twelve days to use the most capable model on the market for free. After that, you pay separately. I do not know if Anthropic will extend this, but I would not plan on it.</p>
+
+    <p>My simple advice: pick one hard problem you have been postponing — a messy architecture decision, a document set nobody wants to read, a bug nobody could crack — and give it to Fable 5 this week. That is the honest way to find out if a Mythos-class model matters for your work.</p>
+
+    <h2>The numbers that matter</h2>
+
+    <p><b>Pricing (API):</b> <a href="https://www.finout.io/blog/claude-fable-5-mythos-5-pricing-benchmarks">$10 per million input tokens, $50 per million output</a> — roughly <b>double Opus 4.8</b>. The standard 90% prompt-caching discount applies, which matters a lot in agent workflows where you resend the same context again and again.</p>
+
+    <p><b>Context:</b> 1 million tokens in, up to 128K out. A whole mid-sized codebase, or a complete contract data room, fits in one conversation.</p>
+
+    <p><b>Speed — read this part before you get excited:</b> <a href="https://artificialanalysis.ai/models/claude-fable-5">Artificial Analysis measured</a> about <b>60 tokens per second</b> output and <b>~80 seconds to first token</b>. That is slow. Not "slightly slower" — you will feel it. You ask, and then you wait, watching nothing happen, for over a minute sometimes.</p>
+
+    <p>And after a day of using it, my view is: that is fine — <i>if you use it for the right things.</i></p>
+
+    <h2>Smartest is not fastest, and that is okay</h2>
+
+    <img class="inline" src="which-model.png" alt="When I reach for Fable 5 vs Opus 4.8" />
+    <div class="imgcap">When I reach for Fable 5 vs Opus 4.8</div>
+
+    <p>Here is the mental model I have settled on. Fable 5 is not a replacement for your daily model. It is a <b>new top gear</b>.</p>
+
+    <p>For interactive coding — the tight loop where you ask, check, adjust, ask again — the ~80-second wait kills the rhythm. Opus 4.8 stays my daily driver there, and it is excellent. Same for high-volume agent pipelines: at 2× the price and half the speed, putting Fable 5 in a loop that runs hundreds of times is just burning money.</p>
+
+    <p>But for the <i>other</i> kind of work — the deep, slow, "get this right" work — the equation flips completely. Architecture decisions on large systems. The debugging session where three people already gave up. Reading a thousand pages of documents and telling me what actually matters. Strategy drafts where a wrong assumption costs months. There, waiting one minute for a meaningfully better answer is the best trade I have ever been offered. I wrote recently about how AI is brilliant at bounded work and unreliable at coordinated work — my early impression is that Fable 5 moves that boundary. Not removes it. Moves it.</p>
+
+    <p>One more practical note: in tools like Claude Code you can switch models per task. That is exactly how I run it now — Fable 5 for the hard thinking, Opus 4.8 for everything interactive. The skill is not "use the best model". The skill is knowing which gear the task needs.</p>
+
+    <h2>What this means beyond the tech</h2>
+
+    <p>Three things I keep thinking about:</p>
+
+    <p><b>The price of intelligence is forking.</b> We now have models at very different price-performance points, and the gap is widening. Teams that route work to the right model will quietly run 3–5× cheaper than teams that send everything to the flagship. Model routing is becoming a real cost discipline, the same way cloud instance selection became one.</p>
+
+    <p><b>Capability windows are the new marketing.</b> "Free for 12 days, then pay" is a very deliberate move: let everyone <i>feel</i> the difference, then charge for it. Expect this pattern from every lab. Budget owners should start treating model access like a procurement category, not a developer tool subscription.</p>
+
+    <p><b>The safety architecture is the quiet headline.</b> A frontier model that silently delegates risky queries to a safer model is a genuinely new pattern. Whatever you think about AI safety debates, this is what "governance built into the architecture" looks like in practice — and enterprises will copy it for their own internal AI gateways.</p>
+
+    <p>I will write a follow-up once I have a few weeks of real use behind me — especially on whether the brownfield/legacy work I wrote about last time actually benefits, or whether the keyhole problem stays the keyhole problem.</p>
+
+    <p>If you have a paid Claude plan: you have until June 22. Pick your hardest problem and see for yourself. Then tell me what you found — I am collecting impressions.</p>
+
+    <h2 style="font-size:18px;">References</h2>
+    <ol>
+      <li>Anthropic — Claude Fable 5 and Claude Mythos 5 (announcement, 9 June 2026)</li>
+      <li>TechCrunch — Anthropic's Claude Fable 5 is a version of Mythos the public can access today</li>
+      <li>Artificial Analysis — Claude Fable 5: intelligence, performance &amp; price</li>
+      <li>Finout — Claude Fable 5 and Mythos 5: pricing, API costs, benchmarks</li>
+      <li>CNBC — Anthropic releases Mythos-like AI model to the public</li>
+    </ol>
+  </div>
+
+  <div class="engage">
+    <div class="btn"><svg viewBox="0 0 24 24"><path d="M7 11v9H4a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1h3zm0 0 4-7c1.5 0 2.5 1 2.5 2.5L13 11h6a2 2 0 0 1 2 2.4l-1.2 5A2 2 0 0 1 17.8 20H7"/></svg> Like</div>
+    <div class="btn"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-8 8H4l2-3a8 8 0 1 1 15-5z"/></svg> Comment</div>
+    <div class="btn"><svg viewBox="0 0 24 24"><path d="M17 2l4 4-4 4M21 6H8a5 5 0 0 0-5 5M7 22l-4-4 4-4M3 18h13a5 5 0 0 0 5-5"/></svg> Repost</div>
+    <div class="btn"><svg viewBox="0 0 24 24"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg> Send</div>
+  </div>
+</div>
+
+<div class="seclabel">2 · The companion post in the feed (what drives people to the article)</div>
+
+<div class="post">
+  <div class="phead">
+    <div class="av">HP</div>
+    <div>
+      <div class="nm">Hari Prasad</div>
+      <div class="hl">Regional Head @ Sedin Technologies</div>
+      <div class="hl">2h · 🌐</div>
+    </div>
+  </div>
+  <div class="ptext">Anthropic shipped Fable 5 yesterday — the first Mythos-class model the public can actually use. I switched my daily setup to it on day one.
+
+The short version: smartest model available today, about 2x the price of Opus 4.8, and noticeably slow (~80 seconds to first token). And — the part with a clock on it — it's included in every paid Claude plan at no extra cost only until June 22. After that, usage credits.
+
+I've written up the numbers, the trade-offs, and how I'm actually splitting work between Fable 5 and Opus 4.8 — plus why the "fallback to a safer model" guardrail design might be the quiet headline.
+
+If you have a paid Claude plan, you have 12 days to try the best model on the market for free. Article below.
+
+<span class="tag">#Claude</span> <span class="tag">#EnterpriseAI</span></div>
+  <div class="linkcard">
+    <img src="cover.png" alt="article link preview" />
+    <div class="linkmeta">
+      <div class="t">The Smartest Model You Can Use Today Is Also the Slowest. That's Fine.</div>
+      <div class="d">linkedin.com · 6 min read</div>
+    </div>
+  </div>
+  <div class="pengage">
+    <div class="btn"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 11v9H4a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1h3zm0 0 4-7c1.5 0 2.5 1 2.5 2.5L13 11h6a2 2 0 0 1 2 2.4l-1.2 5A2 2 0 0 1 17.8 20H7"/></svg> Like</div>
+    <div class="btn"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 12a8 8 0 0 1-8 8H4l2-3a8 8 0 1 1 15-5z"/></svg> Comment</div>
+    <div class="btn"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M17 2l4 4-4 4M21 6H8a5 5 0 0 0-5 5M7 22l-4-4 4-4M3 18h13a5 5 0 0 0 5-5"/></svg> Repost</div>
+    <div class="btn"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg> Send</div>
+  </div>
+</div>
+
+<div class="footer">Preview only — fonts/spacing approximate LinkedIn's rendering. Your real profile photo replaces the "HP" placeholder.</div>
+
+</body>
+</html>
